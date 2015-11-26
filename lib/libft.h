@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   header.h                                           :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 12:18:50 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/25 20:51:29 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/26 01:37:12 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _HEADER_H
-# define _HEADER_H
+#ifndef LIBFT_H
+# define LIBFT_H
 
 # include <string.h>
 # include <stdlib.h>
@@ -45,4 +45,4 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 
-#endif /* _HEADER_H */
+#endif
