@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 17:50:45 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 15:38:09 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/28 18:37:43 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ char	*ft_strtrim(char const *s)
 	len = len - i;
 	str = ft_strnew(len);
 	str = ft_strsub((char *)s, i, len);
+	str[len] = 0;
 	return (str);
 }

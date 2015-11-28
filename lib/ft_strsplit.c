@@ -6,17 +6,16 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 12:22:34 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 14:11:04 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/28 18:27:45 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int		ft_strsplit_len(char const *s, char c)
 {
-	int t_len;
-	int i;
+	int		t_len;
+	int		i;
 
 	i = 0;
 	t_len = 0;
@@ -37,39 +36,39 @@ int		ft_strsplit_word_len(char const *s, char c)
 	int i;
 
 	i = 0;
-	while (s[i])
-	{
-		while (s[i] != c && s[i])
-			i++;
-	}
+	while (s[i] != c && s[i])
+		i++;
+	if (!i)
+		i++;
 	return (i);
 }
 
 char	**ft_strsplit(char const *s, char c)
 {
+	char	**t_str;
 	int		index;
 	int		i;
-	int		t_len;
-	char	**t_str;
 
+	index = 0;
 	i = 0;
-	if (s[i] && c)
+	if (!s)
+		return (NULL);
+	t_str = (char **)malloc(sizeof(char *) * (ft_strsplit_len(s, c) + 1));
+	if (!t_str)
+		return (NULL);
+	while (s[i])
 	{
-		t_len = ft_strsplit_len(s, c);
-		t_str = (char **)malloc(sizeof(char) * t_len + 1);
-		ft_bzero(t_str, t_len + 1);
-		while (index <= t_len && s[i])
+		if (s[i] == c)
+			i++;
+		else
 		{
+			t_str[index] = ft_strsub(&s[i], 0, ft_strsplit_word_len(s, c));
+			if (t_str[index] == NULL)
+				return (NULL);
+			i = i + ft_strsplit_word_len(&s[i], c);
 			index++;
-			while (s[i] == c && s[i])
-				i++;
-			if (s[i] != c && s[i])
-				t_str[index] = ft_strsub(s, i, ft_strsplit_word_len(&s[i], c));
-			while (s[i] != c && s[i])
-				i++;
 		}
-		return (t_str);
 	}
-	return (NULL);
+	t_str[index] = NULL;
+	return (t_str);
 }
-
