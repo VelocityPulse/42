@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 17:36:23 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 11:48:39 by cchameyr         ###   ########.fr       */
+/*   Created: 2015/11/26 01:56:18 by cchameyr          #+#    #+#             */
+/*   Updated: 2015/11/26 02:00:15 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_putchar(char c)
 {
-	int		cpt;
-	char	*s2;
-
-	cpt = 0;
-	s2 = ft_strnew(ft_strlen(s1));
-	while (s1[cpt])
-	{
-		s2[cpt] = s1[cpt];
-		cpt++;
-	}
-	return (s2);
+	write(1, &c, 1);
 }

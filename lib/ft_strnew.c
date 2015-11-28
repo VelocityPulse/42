@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 17:36:23 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 11:48:39 by cchameyr         ###   ########.fr       */
+/*   Created: 2015/11/27 12:10:32 by cchameyr          #+#    #+#             */
+/*   Updated: 2015/11/28 12:05:20 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strnew(size_t size)
 {
-	int		cpt;
-	char	*s2;
+	char	*str;
 
-	cpt = 0;
-	s2 = ft_strnew(ft_strlen(s1));
-	while (s1[cpt])
-	{
-		s2[cpt] = s1[cpt];
-		cpt++;
-	}
-	return (s2);
+	str = (char *)malloc(sizeof(char) * (size + 1));
+	if (str)
+		return (ft_memset(str, 0, size));
+	return (NULL);
 }

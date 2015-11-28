@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 17:36:23 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 11:48:39 by cchameyr         ###   ########.fr       */
+/*   Created: 2015/11/26 02:26:34 by cchameyr          #+#    #+#             */
+/*   Updated: 2015/11/27 12:26:10 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_strclr(char *s)
 {
-	int		cpt;
-	char	*s2;
+	int i;
 
-	cpt = 0;
-	s2 = ft_strnew(ft_strlen(s1));
-	while (s1[cpt])
-	{
-		s2[cpt] = s1[cpt];
-		cpt++;
-	}
-	return (s2);
+	if (s == NULL)
+		return ;
+	i = ft_strlen(s);
+	while (i--)
+		s[i] = '\0';
 }

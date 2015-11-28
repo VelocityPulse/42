@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 17:36:23 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 11:48:39 by cchameyr         ###   ########.fr       */
+/*   Created: 2015/11/27 17:14:48 by cchameyr          #+#    #+#             */
+/*   Updated: 2015/11/27 19:37:39 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int		cpt;
-	char	*s2;
+	char	*str;
+	int		i;
 
-	cpt = 0;
-	s2 = ft_strnew(ft_strlen(s1));
-	while (s1[cpt])
+	if (!s)
+		return (NULL);
+	str = ft_strnew(len);
+	i = 0;
+	while (i < len)
 	{
-		s2[cpt] = s1[cpt];
-		cpt++;
+		str[i] = s[start];
+		i++;
+		start++;
 	}
-	return (s2);
+	return (str);
 }

@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 17:36:23 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 11:48:39 by cchameyr         ###   ########.fr       */
+/*   Created: 2015/11/27 17:30:38 by cchameyr          #+#    #+#             */
+/*   Updated: 2015/11/28 12:12:29 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		cpt;
-	char	*s2;
+	char	*str;
 
-	cpt = 0;
-	s2 = ft_strnew(ft_strlen(s1));
-	while (s1[cpt])
+	if (s1 && s2)
 	{
-		s2[cpt] = s1[cpt];
-		cpt++;
+		str = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+		str = ft_strcpy(str, (char *)s1);
+		str = ft_strcat(str, (char *)s2);
+		return (str);
 	}
-	return (s2);
+	return (NULL);
 }
+

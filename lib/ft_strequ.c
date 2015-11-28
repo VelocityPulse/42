@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 17:36:23 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 11:48:39 by cchameyr         ###   ########.fr       */
+/*   Created: 2015/11/27 16:34:42 by cchameyr          #+#    #+#             */
+/*   Updated: 2015/11/28 10:58:10 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+int		ft_strequ(char const *s1, char const *s2)
 {
-	int		cpt;
-	char	*s2;
+	int i;
 
-	cpt = 0;
-	s2 = ft_strnew(ft_strlen(s1));
-	while (s1[cpt])
+	i = 0;
+	if (s1 && s2)
 	{
-		s2[cpt] = s1[cpt];
-		cpt++;
+		if (ft_strcmp(s1, s2) == 0)
+			return (1);
 	}
-	return (s2);
+	else if (s1 == s2)
+		return (1);
+	return (0);
 }

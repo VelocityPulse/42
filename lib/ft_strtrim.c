@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 17:36:23 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 11:48:39 by cchameyr         ###   ########.fr       */
+/*   Created: 2015/11/27 17:50:45 by cchameyr          #+#    #+#             */
+/*   Updated: 2015/11/27 19:40:55 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strtrim(char const *s)
 {
-	int		cpt;
-	char	*s2;
+	char	*str;
+	int		len;
+	int		i;
 
-	cpt = 0;
-	s2 = ft_strnew(ft_strlen(s1));
-	while (s1[cpt])
-	{
-		s2[cpt] = s1[cpt];
-		cpt++;
-	}
-	return (s2);
+	i = 0;
+	if (!s)
+		return (NULL);
+	len = ft_strlen(s) - 1;
+	while (s[len] == ' ' || s[len] == '\n' ||  s[len] == '\t')
+		len--;
+	len++;
+	while ((i < len) && (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'))
+		i++;
+	len = len - i;
+	str = ft_strnew(len);
+	str = ft_strsub((char *)s, i, len);
+	return (str);
 }

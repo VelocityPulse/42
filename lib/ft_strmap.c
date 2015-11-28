@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/23 17:36:23 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 11:48:39 by cchameyr         ###   ########.fr       */
+/*   Created: 2015/11/27 16:16:38 by cchameyr          #+#    #+#             */
+/*   Updated: 2015/11/27 17:59:29 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+char	*ft_strmap(char const *s, char (*f)(char))
 {
-	int		cpt;
-	char	*s2;
+	char	*str;
+	int		i;
 
-	cpt = 0;
-	s2 = ft_strnew(ft_strlen(s1));
-	while (s1[cpt])
+	i = 0;
+	if (!s || !f)
+		return ((char *)s);
+	str = ft_strnew(ft_strlen(s));
+	while (s[i])
 	{
-		s2[cpt] = s1[cpt];
-		cpt++;
+		str[i] = f(s[i]);
+		i++;
 	}
-	return (s2);
+	return (str);
 }
