@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 15:15:16 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/26 01:24:55 by cchameyr         ###   ########.fr       */
+/*   Created: 2015/11/29 12:55:51 by cchameyr          #+#    #+#             */
+/*   Updated: 2015/11/29 14:42:14 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *str)
 {
-	int neg;
-	int cpt;
-	int n;
+	int	neg;
+	int	cpt;
+	int	n;
 
 	n = 0;
 	neg = 0;

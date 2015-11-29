@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 12:22:34 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 18:27:45 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/29 14:35:47 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,6 @@ char	**ft_strsplit(char const *s, char c)
 		else
 		{
 			t_str[index] = ft_strsub(&s[i], 0, ft_strsplit_word_len(s, c));
-			if (t_str[index] == NULL)
-				return (NULL);
 			i = i + ft_strsplit_word_len(&s[i], c);
 			index++;
 		}
