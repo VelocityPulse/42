@@ -6,11 +6,12 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 12:08:35 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/27 12:08:41 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/29 15:23:00 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 void	ft_memdel(void **ap)
 {

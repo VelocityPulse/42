@@ -6,11 +6,12 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 12:10:32 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 12:05:20 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/29 15:23:58 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strnew(size_t size)
 {

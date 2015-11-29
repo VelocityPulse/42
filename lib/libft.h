@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 12:18:50 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 13:27:40 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/29 15:21:08 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define LIBFT_H
 
 # include <string.h>
-# include <stdlib.h>
-# include <unistd.h>
 
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);

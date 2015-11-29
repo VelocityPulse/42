@@ -6,11 +6,12 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 03:20:13 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/28 11:45:44 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/29 15:22:14 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 int		ft_itoa_len(long n)
 {

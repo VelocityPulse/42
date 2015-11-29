@@ -6,11 +6,12 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 12:22:34 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/29 14:35:47 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/29 15:28:05 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 int		ft_strsplit_len(char const *s, char c)
 {
@@ -62,7 +63,7 @@ char	**ft_strsplit(char const *s, char c)
 			i++;
 		else
 		{
-			t_str[index] = ft_strsub(&s[i], 0, ft_strsplit_word_len(s, c));
+			t_str[index] = ft_strsub(&s[i], 0, ft_strsplit_word_len(&s[i], c));
 			i = i + ft_strsplit_word_len(&s[i], c);
 			index++;
 		}
