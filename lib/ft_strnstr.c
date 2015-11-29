@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 16:05:15 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/26 00:45:16 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/29 10:04:39 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	int		cpt;
-	int		cpt2;
-	int		size;
+	size_t	cpt;
+	size_t	cpt2;
+	size_t	size;
 
 	cpt = 0;
 	cpt2 = 0;

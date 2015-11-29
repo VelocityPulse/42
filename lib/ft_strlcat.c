@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/23 19:10:26 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/26 00:13:38 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/29 10:01:38 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,11 @@
 
 size_t		ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int		i;
+	size_t	i;
 	size_t	size_dst;
 
 	i = 0;
+	size_dst = 0;
 	if (dst)
 	{
 		while (dst[i] && i < size)

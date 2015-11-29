@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 17:14:48 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/27 19:37:39 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/29 10:05:00 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
 	char	*str;
-	int		i;
+	size_t	i;
 
 	if (!s)
 		return (NULL);
