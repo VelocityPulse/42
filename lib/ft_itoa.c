@@ -6,14 +6,14 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 03:20:13 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/29 15:22:14 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/30 14:27:40 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int		ft_itoa_len(long n)
+static int	ft_itoa_len(long n)
 {
 	int len;
 
@@ -34,7 +34,7 @@ int		ft_itoa_len(long n)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	int		len;
 	char	*str;

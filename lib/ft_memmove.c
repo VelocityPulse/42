@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 18:11:10 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/25 07:01:40 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/30 14:10:31 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	char	*s;
 
 	if (dst == src && !len)
-		return (dst);
+		return (NULL);
 	d = (char *)dst;
 	s = (char *)src;
 	if (d > s)
@@ -27,10 +27,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 			d[len] = s[len];
 	}
 	else
-	{
-		while (--len)
-			*d++ = *s++;
-		*d = *s;
-	}
+		dst = ft_memcpy(dst, (void *)src, len);
 	return (dst);
 }

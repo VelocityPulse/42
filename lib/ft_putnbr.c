@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 02:02:21 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/26 04:35:22 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/30 13:57:08 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,19 @@
 
 void	ft_putnbr(int n)
 {
-	if (n < 0)
+	long nbr;
+
+	nbr = n;
+	if (nbr < 0)
 	{
 		ft_putchar('-');
-		n = -n;
+		nbr = -nbr;
 	}
-	if (n >= 10)
+	if (nbr >= 10)
 	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
+		ft_putnbr(nbr / 10);
+		ft_putnbr(nbr % 10);
 	}
 	else
-		ft_putchar(n + 48);
+		ft_putchar(nbr + 48);
 }

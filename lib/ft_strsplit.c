@@ -6,14 +6,14 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/28 12:22:34 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/29 15:28:05 by cchameyr         ###   ########.fr       */
+/*   Updated: 2015/11/30 14:39:54 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int		ft_strsplit_len(char const *s, char c)
+static int		ft_strsplit_len(char const *s, char c)
 {
 	int		t_len;
 	int		i;
@@ -32,7 +32,7 @@ int		ft_strsplit_len(char const *s, char c)
 	return (t_len);
 }
 
-int		ft_strsplit_word_len(char const *s, char c)
+static int		ft_strsplit_word_len(char const *s, char c)
 {
 	int i;
 
@@ -44,7 +44,7 @@ int		ft_strsplit_word_len(char const *s, char c)
 	return (i);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
 	char	**t_str;
 	int		index;
