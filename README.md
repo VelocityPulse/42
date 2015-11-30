@@ -10,3 +10,4 @@ installation :
 - executer (./a.out)
 
 NOTE : par definition ce maintest ne prend pas les fonctions bonus. Vous devez decommenter les DEFINE pour qu'il les test.
+NOTE 2 : Les fonctions sont bonnes aussi avec le moulitest et 42FileChecker.
