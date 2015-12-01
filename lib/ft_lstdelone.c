@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 15:58:43 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/30 16:44:48 by cchameyr         ###   ########.fr       */
+/*   Created: 2015/11/30 16:52:43 by cchameyr          #+#    #+#             */
+/*   Updated: 2015/12/01 12:15:02 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	ft_lstdelone(t_list **alst, void (*del)(void*, size_t))
 {
-	char	*s;
-	char	*d;
-
-	s = (char *)src;
-	d = (char *)dst;
-	if (n == 0 || d == s)
-		return ((void *)d);
-	while (--n)
-		*d++ = *s++;
-	*d = *s;
-	return (dst);
+	del(alst[0]->content, alst[0]->content_size);
+	free(*alst);
+	*alst = NULL;
 }

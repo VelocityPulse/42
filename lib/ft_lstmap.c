@@ -1,28 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 15:58:43 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/30 16:44:48 by cchameyr         ###   ########.fr       */
+/*   Created: 2015/12/01 13:08:40 by cchameyr          #+#    #+#             */
+/*   Updated: 2015/12/01 16:24:52 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char	*s;
-	char	*d;
+	t_list *begin;
+	t_list *list;
 
-	s = (char *)src;
-	d = (char *)dst;
-	if (n == 0 || d == s)
-		return ((void *)d);
-	while (--n)
-		*d++ = *s++;
-	*d = *s;
-	return (dst);
+	begin = NULL;
+	if (lst)
+	{
+		list = f(lst);
+		begin = list;
+		while (lst->next)
+		{
+			list->next = f(lst->next);
+			list = list->next;
+			lst = lst->next;
+		}
+		list = f(lst);
+	}
+	return (begin);
 }
