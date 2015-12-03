@@ -46,4 +46,4 @@ re: fclean all
 cc:
 	clear
 
-c: clear $(NAME)
+c: cc $(NAME)
