@@ -24,8 +24,6 @@ FLAGS	= -Wextra -Werror -Wall
 
 RM		= rm -f
 
-CLEAN	= *~
-
 all: $(NAME)
 
 $(NAME): $(OBJS)
@@ -36,7 +34,7 @@ $(OBJS):
 	$(GCC) $(FLAGS) -c -I./ $(SRCS)
 
 clean:
-	$(RM) *~ $(OBJS)
+	$(RM) $(OBJS)
 
 fclean: clean
 	$(RM) $(NAME)
