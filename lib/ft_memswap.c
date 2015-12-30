@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_memswap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
+/*   By:  <cchameyr.student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 15:57:38 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/12/29 14:15:23 by                  ###   ########.fr       */
+/*   Created: 2015/12/30 08:34:29 by cchameyr          #+#    #+#             */
+/*   Updated: 2015/12/30 08:38:17 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_memalloc(size_t size)
+void	ft_memswap(void **a, void **b)
 {
-	void	*ret;
+	void	*temp;
 
-	ret = (void *)malloc(size);
-	if (!ret)
-		return (NULL);
-	ft_bzero(ret, size);
-	return (ret);
+	temp = b;
+	b = a;
+	a = temp;
 }
