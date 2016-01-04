@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 12:18:50 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/12/30 18:42:07 by                  ###   ########.fr       */
+/*   Updated: 2016/01/04 17:10:17 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 
 # include <string.h>
+
+typedef struct	s_pt
+{
+	int				x;
+	int				y;
+}				t_pt;
 
 typedef struct	s_list
 {
