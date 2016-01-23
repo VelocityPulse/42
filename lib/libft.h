@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 12:18:50 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/01/22 15:21:08 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/01/23 14:44:57 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@ typedef struct	s_pt
 	int				x;
 	int				y;
 }				t_pt;
+
+typedef struct	s_pt3d
+{
+	int				x;
+	int				y;
+	int				z;
+}				t_pt3d;
 
 typedef struct	s_list
 {
