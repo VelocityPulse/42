@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memalloc.c                                      :+:      :+:    :+:   */
+/*   ft_make_pt3df.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
+/*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 15:57:38 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/12/29 14:15:23 by                  ###   ########.fr       */
+/*   Created: 2016/02/11 15:00:45 by cchameyr          #+#    #+#             */
+/*   Updated: 2016/02/11 15:00:47 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	*ft_memalloc(size_t size)
+t_pt3df		ft_make_pt3df(float x, float y, float z)
 {
-	void	*ret;
+	t_pt3df	pt;
 
-	ret = (void *)malloc(size);
-	if (!ret)
-		return (NULL);
-	ft_bzero(ret, size);
-	return (ret);
+	pt.x = x;
+	pt.y = y;
+	pt.z = z;
+	return (pt);
 }

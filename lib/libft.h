@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 12:18:50 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/01/25 13:26:03 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/02/11 15:01:47 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,13 @@ typedef struct	s_pt3d
 	int				y;
 	int				z;
 }				t_pt3d;
+
+typedef struct	s_pt3df
+{
+	float			x;
+	float			y;
+	float			z;
+}				t_pt3df;
 
 typedef struct	s_list
 {
@@ -97,4 +104,15 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 void			ft_swap(int *a, int *b);
 int				ft_memlen(void **tab);
+t_pt			ft_make_pt(int x, int y);
+t_pt3d			ft_make_pt3d(int x, int y, int z);
+t_pt3df			ft_make_pt3df(float x, float y, float z);
+t_pt			ft_add_pt(t_pt pt1, t_pt pt2);
+t_pt3d			ft_add_pt3d(t_pt3d pt1, t_pt3d pt2);
+t_pt3df			ft_add_pt3df(t_pt3df p, float x, float y, float z);
+t_pt			**ft_pt_alloc(t_pt size);
+t_pt			**ft_free_pt(t_pt **tab_pts, int size);
+t_pt3d			**ft_pt3d_alloc(t_pt size);
+t_pt3d			**ft_free_pt3d(t_pt3d **tab_pts, int size);
+
 #endif
