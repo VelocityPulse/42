@@ -6,16 +6,18 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/11 15:00:34 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/02/11 15:00:35 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/02/11 15:21:13 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_pt3df		ft_add_pt3df(t_pt3df p, float x, float y, float z)
+t_pt3df		ft_add_pt3df(t_pt3df pt1, t_pt3df pt2)
 {
-	p.x += x;
-	p.y += y;
-	p.z += z;
-	return (p);
+	t_pt3df 	pt3;
+
+	pt3.x = pt1.x + pt2.x;
+	pt3.y = pt1.y + pt2.y;
+	pt3.z = pt1.z + pt2.z;
+	return (pt3);
 }
