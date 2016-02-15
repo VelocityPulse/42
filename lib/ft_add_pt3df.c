@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/11 15:00:34 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/02/11 15:21:13 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/02/15 13:44:20 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_pt3df		ft_add_pt3df(t_pt3df pt1, t_pt3df pt2)
 {
-	t_pt3df 	pt3;
+	t_pt3df		pt3;
 
 	pt3.x = pt1.x + pt2.x;
 	pt3.y = pt1.y + pt2.y;
