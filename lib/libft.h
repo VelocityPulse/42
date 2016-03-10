@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 12:18:50 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/02/11 15:21:21 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/03/10 11:10:24 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ typedef struct	s_pt
 	int				x;
 	int				y;
 }				t_pt;
+
+typedef struct	s_ptll
+{
+	long long		x;
+	long long		y;
+}				t_ptll;
 
 typedef struct	s_pt3d
 {
@@ -105,6 +111,7 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 void			ft_swap(int *a, int *b);
 int				ft_memlen(void **tab);
 t_pt			ft_make_pt(int x, int y);
+t_ptll			ft_make_ptll(long long x, long long y);
 t_pt3d			ft_make_pt3d(int x, int y, int z);
 t_pt3df			ft_make_pt3df(float x, float y, float z);
 t_pt			ft_add_pt(t_pt pt1, t_pt pt2);

@@ -9,7 +9,7 @@ ft_strncmp.c ft_strncpy.c ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c \
 ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c \
 ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstiter.c ft_lstmap.c ft_lstadd.c \
 ft_swap.c ft_memlen.c ft_pt_alloc.c ft_make_pt.c ft_make_pt3d.c ft_add_pt.c \
-ft_add_pt3d.c ft_make_pt3df.c ft_add_pt3df.c ft_pt3d_alloc.c
+ft_add_pt3d.c ft_make_pt3df.c ft_add_pt3df.c ft_pt3d_alloc.c ft_make_ptll.c
 
 OBJS		= ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 ft_isdigit.o ft_isprint.o ft_itoa.o ft_memalloc.o ft_memccpy.o ft_memchr.o \
@@ -22,7 +22,7 @@ ft_strncmp.o ft_strncpy.o ft_strnequ.o ft_strnew.o ft_strnstr.o ft_strrchr.o \
 ft_strsplit.o ft_strstr.o ft_strsub.o ft_strtrim.o ft_tolower.o ft_toupper.o \
 ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstiter.o ft_lstmap.o ft_lstadd.o \
 ft_swap.o ft_memlen.o ft_pt_alloc.o ft_make_pt.o ft_make_pt3d.o ft_add_pt.o \
-ft_add_pt3d.o ft_make_pt3df.o ft_add_pt3df.o ft_pt3d_alloc.o
+ft_add_pt3d.o ft_make_pt3df.o ft_add_pt3df.o ft_pt3d_alloc.o ft_make_ptll.o
 
 GCC		= gcc
 
