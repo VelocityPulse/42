@@ -6,13 +6,13 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/04/03 12:07:13 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/04/03 12:08:20 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/04/03 12:41:19 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_ptd		ft_mak_ptd(double x, double y)
+t_ptd		ft_make_ptd(double x, double y)
 {
 	t_ptd		pt;
 
