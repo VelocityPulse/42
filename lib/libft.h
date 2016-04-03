@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 12:20:08 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/03/21 12:20:09 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/04/03 12:10:29 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,12 @@ typedef struct	s_pt
 	int				x;
 	int				y;
 }				t_pt;
+
+typedef struct	s_ptd
+{
+	double			x;
+	double			y;
+}				t_ptd;
 
 typedef struct	s_ptll
 {
@@ -108,16 +114,27 @@ void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
+/*
+ **
+ ** private functions
+ **
+*/
+
 void			ft_swap(int *a, int *b);
 int				ft_memlen(void **tab);
+
 t_pt			ft_make_pt(int x, int y);
+t_ptd			ft_make_ptd(double x, double y);
 t_ptll			ft_make_ptll(long long x, long long y);
 t_pt3d			ft_make_pt3d(int x, int y, int z);
 t_pt3df			ft_make_pt3df(float x, float y, float z);
+
 t_pt			ft_add_pt(t_pt pt1, t_pt pt2);
+t_ptd			ft_add_ptd(t_ptd pt1, t_ptd pt2);
 t_ptll			ft_add_ptll(t_ptll pt1, t_ptll pt2);
 t_pt3d			ft_add_pt3d(t_pt3d pt1, t_pt3d pt2);
 t_pt3df			ft_add_pt3df(t_pt3df pt1, t_pt3df pt2);
+
 t_pt			**ft_pt_alloc(t_pt size);
 t_pt			**ft_free_pt(t_pt **tab_pts, int size);
 t_pt3d			**ft_pt3d_alloc(t_pt size);
