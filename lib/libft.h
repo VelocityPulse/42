@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 12:20:08 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/03/21 12:20:09 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/04/08 22:32:26 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,19 @@ typedef struct	s_pt3df
 	float			z;
 }				t_pt3df;
 
+typedef struct	s_lstline
+{
+	struct s_lstline	*next;
+	char				*line;
+}				t_lstline;
+
 typedef struct	s_list
 {
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
 }				t_list;
+
 
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -107,6 +114,10 @@ void			ft_lstdel(t_list **alst, void (del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+void			ft_lstline_del(t_lstline *begin);
+t_lstline		*ft_new_lstline(void);
+t_lstline		*ft_add_lstline(t_lstline *begin, char *line);
 
 void			ft_swap(int *a, int *b);
 int				ft_memlen(void **tab);
