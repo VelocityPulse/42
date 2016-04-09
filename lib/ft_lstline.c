@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 13:47:45 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/04/08 22:34:37 by                  ###   ########.fr       */
+/*   Updated: 2016/04/09 12:44:54 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ t_lstline	*ft_new_lstline(void)
 	return (list);
 }
 
-t_lstline	*ft_add_list(t_lstline *begin, char *line)
+t_lstline	*ft_add_lstline(t_lstline *begin, char *line)
 {
 	t_lstline	*list;
 
