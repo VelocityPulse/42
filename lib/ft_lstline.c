@@ -6,13 +6,13 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 13:47:45 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/04/09 12:44:54 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/05/03 12:16:55 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstline_del(t_lstline *begin)
+void		ft_lstline_del(t_lstline *begin)
 {
 	t_lstline	*temp1;
 	t_lstline	*temp2;
