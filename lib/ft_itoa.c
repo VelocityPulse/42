@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 03:20:13 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/30 14:27:40 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/05/13 15:27:59 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ char		*ft_itoa(int n)
 
 	nbr = n;
 	len = ft_itoa_len(nbr);
-	str = (char *)malloc(sizeof(char *) * (len + 1));
-	str[len] = '\0';
+	if (!(str = ft_strnew(len)))
+		return (NULL);
 	if (n < 0)
 		nbr = -nbr;
 	while (len)
