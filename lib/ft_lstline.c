@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 13:47:45 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/05/03 12:16:55 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/05/26 14:21:08 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ void		ft_lstline_del(t_lstline *begin)
 		while (temp1)
 		{
 			temp2 = temp1->next;
+			ft_memdel((void **)&temp1->line);
 			ft_memdel((void **)&temp1);
 			temp1 = temp2;
 		}
