@@ -6,13 +6,13 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 13:47:45 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/05/26 14:21:08 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/06/01 12:14:54 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void		ft_lstline_del(t_lstline *begin)
+t_lstline	*ft_lstline_del(t_lstline *begin)
 {
 	t_lstline	*temp1;
 	t_lstline	*temp2;
@@ -29,6 +29,7 @@ void		ft_lstline_del(t_lstline *begin)
 		}
 		begin = NULL;
 	}
+	return (begin);
 }
 
 t_lstline	*ft_new_lstline(void)

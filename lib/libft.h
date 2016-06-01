@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 12:20:08 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/05/03 12:17:08 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/06/01 12:14:30 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -144,7 +144,7 @@ t_pt			**ft_free_pt(t_pt **tab_pts, int size);
 t_pt3d			**ft_pt3d_alloc(t_pt size);
 t_pt3d			**ft_free_pt3d(t_pt3d **tab_pts, int size);
 
-void			ft_lstline_del(t_lstline *begin);
+t_lstline		*ft_lstline_del(t_lstline *begin);
 t_lstline		*ft_new_lstline(void);
 t_lstline		*ft_add_lstline(t_lstline *begin, char *line);
 
