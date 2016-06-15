@@ -6,13 +6,13 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 12:55:51 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/06/15 14:39:10 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/06/15 14:40:12 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int			ft_atoi(const char *str)
 {
 	int	neg;
 	int	cpt;
