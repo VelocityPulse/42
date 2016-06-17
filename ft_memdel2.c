@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/16 16:59:53 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/06/16 17:10:48 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/06/17 11:15:32 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,12 @@ void	ft_memdel2(void ***ap)
 {
 	int		i;
 
-	if (ap != NULL)
+	if (ap != NULL && *ap != NULL)
 	{
 		i = -1;
-		while (*ap[++i])
-			ft_memdel((void **)&(*ap[i]));
+		while ((*ap)[++i])
+			ft_memdel((void **)&(*ap)[i]);
 		free(*ap);
 		*ap = NULL;
 	}
 }
-
-/* a tester */
