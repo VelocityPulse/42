@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/17 12:52:24 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/06/17 13:53:03 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/06/17 15:10:59 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,25 @@ int		ft_strisdouble(char *str)
 	int		i;
 	int		dot;
 
-	if (!str)
-		return (0);
-	i = -1;
+	i = 0;
 	dot = 0;
-	while (str[++i])
+	while (str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+		i++;
+	while (str[i])
 	{
 		if (ft_isdigit(str[i]))
 			;
 		else if (str[i] == '.')
 		{
-			if (dot == 0)
-				dot++;
-			else
+			dot++;
+			if (dot > 1)
 				return (0);
 		}
 		else
 			return (0);
+		i++;
 	}
 	return (1);
 }
