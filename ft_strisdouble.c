@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/17 12:52:24 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/06/19 14:43:17 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/06/24 10:59:49 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ static int		ft_back_number(char *str)
 {
 	int		i;
 
-	i = 0;
-	while (str[i] == ' ')
-		i++;
+	i = -1;
+	while (str[++i] == ' ')
+		;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	return (i);
