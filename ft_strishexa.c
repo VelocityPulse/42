@@ -36,10 +36,7 @@ static int		ft_strishexa_loop(char *str, int i)
 		else if (str[i] == ' ')
 			end = 1;
 		else
-		{
-			ft_putstr("YOLO\n");
 			return (0);
-		}
 		i++;
 	}
 	return (1);
