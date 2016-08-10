@@ -6,13 +6,13 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 12:55:51 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/06/19 16:06:07 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/08/10 14:44:51 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_strlen_nb(char *str)
+static int			ft_strlen_nb(char *str)
 {
 	int		i;
 

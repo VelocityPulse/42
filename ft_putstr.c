@@ -6,20 +6,17 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/26 01:58:54 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/26 02:01:25 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/08/10 14:42:18 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include "unistd.h"
 
 void	ft_putstr(char const *s)
 {
 	int i;
 
-	i = 0;
-	while (s[i])
-	{
-		ft_putchar(s[i]);
-		i++;
-	}
+	i = ft_strlen(s);
+	write(1, s, i);
 }
