@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_long.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
+/*   By:  <>                                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/26 02:02:21 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/16 01:25:17 by                  ###   ########.fr       */
+/*   Created: 2016/08/16 01:18:02 by                   #+#    #+#             */
+/*   Updated: 2016/08/16 01:31:48 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-void	ft_putnbr(int n)
+void	ft_putnbr_long(long n)
 {
-	long nbr;
-
-	nbr = n;
-	if (nbr < 0)
+	if (n < 0)
 	{
 		write(1, "-", 1);
-		nbr = -nbr;
+		n = -n;
 	}
-	if (nbr >= 10)
+	if (n >= 10)
 	{
-		ft_putnbr(nbr / 10);
-		ft_putnbr(nbr % 10);
+		ft_putnbr_long(n / 10);
+		ft_putnbr_long(n % 10);
 	}
 	else
-		ft_putchar(nbr + 48);
+		ft_putchar(n + 48);
 }

@@ -13,7 +13,7 @@ ft_add_pt3d.c ft_make_pt3df.c ft_add_pt3df.c ft_pt3d_alloc.c ft_make_ptll.c \
 ft_add_ptll.c ft_make_ptd.c ft_add_ptd.c ft_lstline.c ft_make_ptd3d.c \
 ft_add_ptd3d.c ft_power.c ft_strisdigit.c ft_memdel2.c ft_strisdouble.c \
 ft_abs.c ft_atoi_base.c ft_ishexa.c ft_strishexa.c ft_putstrlen.c ft_nblen.c \
-ft_nblen_long.c ft_itoa_base.c
+ft_nblen_long.c ft_itoa_base.c ft_putnbr_long.c
 
 OBJS		= ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 ft_isdigit.o ft_isprint.o ft_itoa.o ft_memalloc.o ft_memccpy.o ft_memchr.o \
@@ -30,7 +30,7 @@ ft_add_pt3d.o ft_make_pt3df.o ft_add_pt3df.o ft_pt3d_alloc.o ft_make_ptll.o \
 ft_add_ptll.o ft_make_ptd.o ft_add_ptd.o ft_lstline.o ft_make_ptd3d.o \
 ft_add_ptd3d.o ft_power.o ft_strisdigit.o ft_memdel2.o ft_strisdouble.o \
 ft_abs.o ft_atoi_base.o ft_ishexa.o ft_strishexa.o ft_putstrlen.o ft_nblen.o \
-ft_nblen_long.o ft_itoa_base.o
+ft_nblen_long.o ft_itoa_base.o ft_putnbr_long.o
 
 GCC		= gcc
 
