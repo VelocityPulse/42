@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 12:20:08 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/15 02:32:59 by                  ###   ########.fr       */
+/*   Updated: 2016/08/15 19:34:43 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,6 +132,8 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 */
 
 void			ft_putstrlen(char const *s, size_t len);
+int				ft_nblen(long n);
+
 int				ft_power(int nb, int pow);
 int				ft_abs(int a);
 double			ft_absd(double a);

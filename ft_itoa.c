@@ -6,33 +6,12 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/15 14:40:27 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/06/15 14:40:29 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/08/15 19:34:17 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-
-static int	ft_itoa_len(long n)
-{
-	int len;
-
-	len = 0;
-	if (n < 0)
-	{
-		n = -n;
-		len = ft_itoa_len(n);
-		len++;
-	}
-	else if (n >= 10)
-	{
-		len = ft_itoa_len(n / 10);
-		len++;
-	}
-	else
-		len++;
-	return (len);
-}
 
 char		*ft_itoa(int n)
 {
@@ -41,7 +20,7 @@ char		*ft_itoa(int n)
 	long	nbr;
 
 	nbr = n;
-	len = ft_itoa_len(nbr);
+	len = ft_nblen(nbr);
 	if (!(str = ft_strnew(len)))
 		return (NULL);
 	if (n < 0)
