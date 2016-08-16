@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 12:20:08 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/16 15:58:17 by                  ###   ########.fr       */
+/*   Updated: 2016/08/16 16:37:05 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -149,6 +149,7 @@ int				ft_ishexa(int c);
 int				ft_strishexa(char *str);
 int				ft_strisdigit(char *str);
 int				ft_strisdouble(char *str);
+void			ft_upperstr(char *str);
 
 void			ft_swap(int *a, int *b);
 int				ft_memlen(void **tab);
