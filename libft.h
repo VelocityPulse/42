@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 12:20:08 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/16 18:20:21 by                  ###   ########.fr       */
+/*   Updated: 2016/08/16 18:26:15 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,6 +135,7 @@ void			ft_putstrlen(char const *s, size_t len);
 void			ft_putnbr_l(long n);
 int				ft_nblen(int n);
 int				ft_nblen_l(long n);
+int				ft_nblen_ll(long long n);
 
 int				ft_power(int nb, int pow);
 int				ft_abs(int a);
