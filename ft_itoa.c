@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/15 14:40:27 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/16 02:11:31 by                  ###   ########.fr       */
+/*   Updated: 2016/08/16 18:20:56 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_itoa(int n)
 	long	nbr;
 
 	nbr = n;
-	len = ft_nblen_long(nbr);
+	len = ft_nblen_l(nbr);
 	if (!(str = ft_strnew(len)))
 		return (NULL);
 	if (n < 0)
