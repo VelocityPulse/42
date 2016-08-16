@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/15 14:40:27 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/16 00:51:29 by                  ###   ########.fr       */
+/*   Updated: 2016/08/16 02:11:31 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,17 +20,22 @@ char	*ft_itoa(int n)
 	long	nbr;
 
 	nbr = n;
-	len = ft_nblen(nbr);
+	len = ft_nblen_long(nbr);
 	if (!(str = ft_strnew(len)))
 		return (NULL);
 	if (n < 0)
 		nbr = -nbr;
-	while (len--)
+	while (len)
 	{
-		str[len] = 48 + (nbr % 10);
+		str[--len] = 48 + (nbr % 10);
 		nbr = nbr / 10;
 	}
 	if (str[len] == '0' && str[1] != '\0')
 		str[len] = '-';
 	return (str);
 }
+
+/*
+** len-- is in the while because it cause a bug if he is in the parenthese
+** he becomes -1 after it
+*/
