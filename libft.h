@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 12:20:08 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/16 01:33:59 by                  ###   ########.fr       */
+/*   Updated: 2016/08/16 15:58:17 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -143,6 +143,7 @@ double			ft_absd(double a);
 double			ft_atoid(char *str);
 int				ft_atoi_base(const char *str, int base);
 char			*ft_itoa_base(unsigned int n, int base);
+char			*ft_itoa_base_long(unsigned long int n, int base);
 
 int				ft_ishexa(int c);
 int				ft_strishexa(char *str);
