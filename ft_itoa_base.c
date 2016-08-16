@@ -6,7 +6,7 @@
 /*   By:  <>                                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/16 00:22:27 by                   #+#    #+#             */
-/*   Updated: 2016/08/16 01:01:13 by                  ###   ########.fr       */
+/*   Updated: 2016/08/16 02:15:42 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ char		*ft_itoa_base(unsigned int n, int base)
 	len = ft_nblen_base(n, base);
 	if (!(str = ft_strnew(len)))
 		return (NULL);
-	while (len--)
+	while (len)
 	{
-		str[len] = tab[n % base];
+		str[--len] = tab[n % base];
 		n = n / base;
 	}
 	return (str);
