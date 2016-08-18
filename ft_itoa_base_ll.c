@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base_l.c                                   :+:      :+:    :+:   */
+/*   ft_itoa_base_ll.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By:  <>                                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/16 15:56:02 by                   #+#    #+#             */
-/*   Updated: 2016/08/18 19:38:55 by                  ###   ########.fr       */
+/*   Created: 2016/08/18 19:37:15 by                   #+#    #+#             */
+/*   Updated: 2016/08/18 19:39:22 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_nblen_base_l(unsigned long int n, int base)
+static int	ft_nblen_base_ll(unsigned long long int n, int base)
 {
 	int		len;
 
 	len = 1;
-	while (n >= (unsigned long int)base)
+	while (n >= (unsigned long long int)base)
 	{
 		n /= base;
 		len++;
@@ -25,7 +25,7 @@ static int	ft_nblen_base_l(unsigned long int n, int base)
 	return (len);
 }
 
-char		*ft_itoa_base_l(unsigned long int n, int base)
+char		*ft_itoa_base_ll(unsigned long long int n, int base)
 {
 	int				len;
 	char			*str;
@@ -34,7 +34,7 @@ char		*ft_itoa_base_l(unsigned long int n, int base)
 
 	if (base > 16 || base <= 1)
 		return (NULL);
-	len = ft_nblen_base_l(n, base);
+	len = ft_nblen_base_ll(n, base);
 	if (!(str = ft_strnew(len)))
 		return (NULL);
 	while (len)
