@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 12:20:08 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/18 19:41:18 by                  ###   ########.fr       */
+/*   Updated: 2016/08/20 19:12:40 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 # define LIBFT_H
 
 # include <string.h>
+
+typedef enum	e_bool
+{
+	false,
+	true
+}				t_bool;
 
 typedef struct	s_pt
 {
