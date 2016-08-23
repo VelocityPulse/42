@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/24 10:52:47 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/16 00:49:44 by                  ###   ########.fr       */
+/*   Updated: 2016/08/23 23:35:31 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,14 @@ static int	ft_base(char c, int base)
 	return (-1);
 }
 
-static int	ft_atoi_loop(const char *str, int i, int base)
+static int	ft_atoi_loop(const char *str, int base)
 {
 	int		result;
 	int		base_val;
+	int		i;
 
 	result = 0;
+	i = 0;
 	while (ft_isdigit(str[i]) || (str[i] >= 'A' && str[i] <= 'F') ||
 			(str[i] >= 'a' && str[i] <= 'f'))
 	{
@@ -64,5 +66,6 @@ int			ft_atoi_base(const char *str, int base)
 		n = -1;
 		i++;
 	}
-	return (n == -1 ? -ft_atoi_loop(str, i, base) : ft_atoi_loop(str, i, base));
+	return (n == -1 ? -ft_atoi_loop(&str[i], base) :
+	ft_atoi_loop(&str[i], base));
 }
