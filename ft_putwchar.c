@@ -6,7 +6,7 @@
 /*   By:  <>                                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/23 22:39:54 by                   #+#    #+#             */
-/*   Updated: 2016/08/24 00:30:13 by                  ###   ########.fr       */
+/*   Updated: 2016/08/24 00:41:41 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 static int		ft_write_mask(char *mask, int bytes)
 {
-	int				i;
-	unsigned int	w;
+	int		i;
+	int		w;
 
 	i = -1;
 	while (++i < bytes)
@@ -27,7 +27,7 @@ static int		ft_write_mask(char *mask, int bytes)
 	return (bytes);
 }
 
-static int		ft_wchar_help(unsigned int c, char *mask, int bytes)
+static int		ft_wchar_help(int c, char *mask, int bytes)
 {
 	int		i;
 
@@ -51,7 +51,7 @@ static int		ft_wchar_help(unsigned int c, char *mask, int bytes)
 	return (ft_write_mask(mask, bytes));
 }
 
-int				ft_putwchar(unsigned int c)
+int				ft_putwchar(int c)
 {
 	int		len;
 	char	mask2[16];
