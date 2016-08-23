@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 12:20:08 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/23 22:38:47 by                  ###   ########.fr       */
+/*   Updated: 2016/08/23 23:47:27 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -150,7 +150,8 @@ int				ft_abs(int a);
 double			ft_absd(double a);
 
 double			ft_atoid(char *str);
-int				ft_atoi_base(const char *str, int base);
+unsigned int	ft_atoi_base(const char *str, int base);
+unsigned int	ft_atoi_nbase(const char *str, int base, int len);
 char			*ft_itoa_base(unsigned int n, int base);
 char			*ft_itoa_base_l(unsigned long int n, int base);
 char			*ft_itoa_base_ll(unsigned long long int n, int base);

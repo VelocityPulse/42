@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi_base.c                                     :+:      :+:    :+:   */
+/*   ft_atoi_nbase.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/24 10:52:47 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/23 23:47:54 by                  ###   ########.fr       */
+/*   Updated: 2016/08/23 23:47:31 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int		ft_base(char c, int base)
 	return (-1);
 }
 
-static int		ft_atoi_loop(const char *str, int base)
+static int		ft_atoi_nloop(const char *str, int base, int len)
 {
 	int		result;
 	int		base_val;
@@ -36,8 +36,8 @@ static int		ft_atoi_loop(const char *str, int base)
 
 	result = 0;
 	i = 0;
-	while (ft_isdigit(str[i]) || (str[i] >= 'A' && str[i] <= 'F') ||
-			(str[i] >= 'a' && str[i] <= 'f'))
+	while ((ft_isdigit(str[i]) || (str[i] >= 'A' && str[i] <= 'F') ||
+			 (str[i] >= 'a' && str[i] <= 'f')) && len--)
 	{
 		base_val = ft_base(str[i], base);
 		if (base_val == -1)
@@ -49,7 +49,7 @@ static int		ft_atoi_loop(const char *str, int base)
 	return (result);
 }
 
-unsigned int	ft_atoi_base(const char *str, int base)
+unsigned int	ft_atoi_nbase(const char *str, int base, int len)
 {
 	int		i;
 	int		n;
@@ -66,6 +66,6 @@ unsigned int	ft_atoi_base(const char *str, int base)
 		n = -1;
 		i++;
 	}
-	return (n == -1 ? -ft_atoi_loop(&str[i], base) :
-	ft_atoi_loop(&str[i], base));
+	return (n == -1 ? -ft_atoi_nloop(&str[i], base, len) :
+	ft_atoi_nloop(&str[i], base, len));
 }
