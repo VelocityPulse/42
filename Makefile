@@ -15,7 +15,7 @@ ft_add_ptd3d.c ft_power.c ft_strisdigit.c ft_memdel2.c ft_strisdouble.c \
 ft_abs.c ft_atoi_base.c ft_ishexa.c ft_strishexa.c ft_putnstr.c ft_nblen.c \
 ft_nblen_l.c ft_itoa_base.c ft_putnbr_l.c ft_itoa_base_l.c ft_binlen.c \
 ft_upperstr.c ft_putnbr_ll.c ft_nblen_ll.c ft_itoa_base_ll.c ft_lowerstr.c \
-ft_putwchar.c ft_atoi_nbase.c ft_putwstr.c
+ft_putwchar.c ft_atoi_nbase.c ft_putwstr.c ft_putnwstr.c ft_putnwchar.c
 
 OBJS		= ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 ft_isdigit.o ft_isprint.o ft_itoa.o ft_memalloc.o ft_memccpy.o ft_memchr.o \
@@ -34,7 +34,7 @@ ft_add_ptd3d.o ft_power.o ft_strisdigit.o ft_memdel2.o ft_strisdouble.o \
 ft_abs.o ft_atoi_base.o ft_ishexa.o ft_strishexa.o ft_putnstr.o ft_nblen.o \
 ft_nblen_l.o ft_itoa_base.o ft_putnbr_l.o ft_itoa_base_l.o ft_binlen.o \
 ft_upperstr.o ft_putnbr_ll.o ft_nblen_ll.o ft_itoa_base_ll.o ft_lowerstr.o \
-ft_putwchar.o ft_atoi_nbase.o ft_putwstr.o
+ft_putwchar.o ft_atoi_nbase.o ft_putwstr.o ft_putnwstr.o ft_putnwchar.o
 
 GCC		= gcc
 
