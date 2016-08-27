@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 12:20:08 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/27 00:08:15 by                  ###   ########.fr       */
+/*   Updated: 2016/08/27 18:24:34 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -153,6 +153,7 @@ int				ft_binlen(unsigned int n);
 int				ft_power(int nb, int pow);
 int				ft_abs(int a);
 double			ft_absd(double a);
+long long		ft_absll(long long a);
 
 double			ft_atoid(char *str);
 unsigned int	ft_atoi_base(const char *str, int base);
