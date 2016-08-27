@@ -6,27 +6,27 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/20 13:57:52 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/27 18:24:36 by                  ###   ########.fr       */
+/*   Updated: 2016/08/27 19:05:10 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int			ft_abs(int a)
+unsigned int		ft_abs(int a)
 {
 	if (a == -2147483648)
 		return (2147483648);
 	return (a < 0 ? -a : a);
 }
 
-long long	ft_absll(long long a)
+unsigned long long	ft_absll(long long a)
 {
-	if (a == -9223372036854775807)
+	if (a == -9223372036854775807 - 1)
 		return (9223372036854775807);
 	return (a < 0 ? -a : a);
 }
 
-double		ft_absd(double a)
+double				ft_absd(double a)
 {
 	return (a < 0 ? -a : a);
 }
