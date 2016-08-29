@@ -6,28 +6,28 @@
 /*   By:  <>                                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/23 22:39:54 by                   #+#    #+#             */
-/*   Updated: 2016/08/27 00:29:11 by                  ###   ########.fr       */
+/*   Updated: 2016/08/29 22:02:46 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-static int		ft_write_mask(char *mask, int bytes, int len)
+static int		ft_write_mask(char *mask, int bytes)
 {
 	int		i;
 	int		w;
 
 	i = -1;
-	while (++i < bytes && len--)
+	while (++i < bytes)
 	{
 		w = ft_atoi_nbase(&mask[i * 8], 2, 8);
 		write(1, &w, 1);
 	}
-	return (bytes);
+	return (i);
 }
 
-static int		ft_wchar_help(int c, char *mask, int bytes, int len)
+static int		ft_wchar_help(int c, char *mask, int bytes)
 {
 	int		i;
 
@@ -48,34 +48,35 @@ static int		ft_wchar_help(int c, char *mask, int bytes, int len)
 		if (mask[i] == 'x')
 			mask[i] = '0';
 	}
-	return (ft_write_mask(mask, bytes, len));
+	return (ft_write_mask(mask, bytes));
 }
 
-int				ft_putnwchar(int c, int len)
+int				ft_putnwchar(int c, int size)
 {
-	int		len2;
+	int		len;
 	char	mask2[16];
 	char	mask3[24];
 	char	mask4[32];
 
-	if (len < 0)
+	if (size < 0)
 		return (0);
-	len2 = ft_binlen(c);
-	if (len2 <= 7 && len > 0)
+	len = ft_binlen(c);
+	if (len <= 7 && size > 0)
 		return (write(1, &c, 1));
-	else if (len2 <= 11)
+	else if (len <= 11 && size > 1)
 	{
 		ft_strcpy(mask2, "110xxxxx10xxxxxx");
-		return (ft_wchar_help(c, mask2, 2, len));
+		return (ft_wchar_help(c, mask2, 2));
 	}
-	else if (len2 > 11 && len2 <= 16)
+	else if (len > 11 && len <= 16 && size > 2)
 	{
 		ft_strcpy(mask3, "1110xxxx10xxxxxx10xxxxxx");
-		return (ft_wchar_help(c, mask3, 3, len));
+		return (ft_wchar_help(c, mask3, 3));
 	}
-	else
+	else if (size > 3)
 	{
 		ft_strcpy(mask4, "11110xxx10xxxxxx10xxxxxx10xxxxxx");
-		return (ft_wchar_help(c, mask4, 4, len));
+		return (ft_wchar_help(c, mask4, 4));
 	}
+	return (0);
 }

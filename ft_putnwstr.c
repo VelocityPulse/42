@@ -6,7 +6,7 @@
 /*   By:  <>                                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/26 23:59:23 by                   #+#    #+#             */
-/*   Updated: 2016/08/27 00:06:34 by                  ###   ########.fr       */
+/*   Updated: 2016/08/29 21:57:29 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		ft_putnwstr(int *str, int len)
 
 	ret = 0;
 	i = -1;
-	while (ret < len)
-		ret += ft_putnwchar(str[++i], len - ret);
+	while (ret < len && str[++i])
+		ret += ft_putnwchar(str[i], len - ret);
 	return (ret);
 }
