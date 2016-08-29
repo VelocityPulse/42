@@ -6,7 +6,7 @@
 /*   By:  <>                                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/23 22:39:54 by                   #+#    #+#             */
-/*   Updated: 2016/08/29 17:23:36 by                  ###   ########.fr       */
+/*   Updated: 2016/08/29 18:03:42 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int				ft_putwchar(int c)
 		ft_strcpy(mask3, "1110xxxx10xxxxxx10xxxxxx");
 		return (ft_wchar_help(c, mask3, 3));
 	}
-	else if (len > 16 && <= 21)
+	else if (len > 16 && len <= 21)
 	{
 		ft_strcpy(mask4, "11110xxx10xxxxxx10xxxxxx10xxxxxx");
 		return (ft_wchar_help(c, mask4, 4));
