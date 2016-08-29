@@ -6,18 +6,19 @@
 /*   By:  <>                                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 02:28:48 by                   #+#    #+#             */
-/*   Updated: 2016/08/23 22:30:00 by                  ###   ########.fr       */
+/*   Updated: 2016/08/29 18:11:33 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-void	ft_putnstr(char const *s, size_t len)
+int		ft_putnstr(char const *s, size_t len)
 {
 	size_t	i;
 
 	i = -1;
 	while (++i < len)
 		write(1, &s[i], 1);
+	return (i);
 }

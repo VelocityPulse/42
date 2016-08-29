@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/03/21 12:20:08 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/29 15:04:42 by                  ###   ########.fr       */
+/*   Updated: 2016/08/29 18:11:31 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,7 +142,7 @@ int					ft_putwstr(int *str);
 int					ft_putnwchar(int c, int len);
 int					ft_putnwstr(int *str, int len);
 
-void				ft_putnstr(char const *s, size_t len);
+int					ft_putnstr(char const *s, size_t len);
 void				ft_putnbr_l(long n);
 void				ft_putnbr_ll(long long n);
 int					ft_nblen(int n);
