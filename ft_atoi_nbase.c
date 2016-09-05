@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/24 10:52:47 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/23 23:47:31 by                  ###   ########.fr       */
+/*   Created: 2016/09/05 14:31:56 by cchameyr          #+#    #+#             */
+/*   Updated: 2016/09/05 14:32:14 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static int		ft_atoi_nloop(const char *str, int base, int len)
 	result = 0;
 	i = 0;
 	while ((ft_isdigit(str[i]) || (str[i] >= 'A' && str[i] <= 'F') ||
-			 (str[i] >= 'a' && str[i] <= 'f')) && len--)
+	(str[i] >= 'a' && str[i] <= 'f')) && len--)
 	{
 		base_val = ft_base(str[i], base);
 		if (base_val == -1)

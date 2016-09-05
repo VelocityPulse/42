@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnwchar.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By:  <>                                        +#+  +:+       +#+        */
+/*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/23 22:39:54 by                   #+#    #+#             */
-/*   Updated: 2016/08/29 22:02:46 by                  ###   ########.fr       */
+/*   Created: 2016/09/05 14:22:33 by cchameyr          #+#    #+#             */
+/*   Updated: 2016/09/05 14:36:02 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,8 @@ int				ft_putnwchar(int c, int size)
 	char	mask3[24];
 	char	mask4[32];
 
-	if (size < 0)
+	if (((len = ft_binlen(c)) >= 0) && size < 0)
 		return (0);
-	len = ft_binlen(c);
 	if (len <= 7 && size > 0)
 		return (write(1, &c, 1));
 	else if (len <= 11 && size > 1)

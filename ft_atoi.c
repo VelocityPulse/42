@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
+/*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/29 12:55:51 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/08/10 14:44:51 by cchameyr         ###   ########.fr       */
+/*   Created: 2016/09/05 14:29:14 by cchameyr          #+#    #+#             */
+/*   Updated: 2016/09/05 14:30:12 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int			ft_strlen_nb(char *str)
+static int		ft_strlen_nb(char *str)
 {
 	int		i;
 
@@ -22,7 +22,7 @@ static int			ft_strlen_nb(char *str)
 	return (i);
 }
 
-int			ft_atoi(const char *str)
+int				ft_atoi(const char *str)
 {
 	int	neg;
 	int	cpt;
@@ -47,7 +47,7 @@ int			ft_atoi(const char *str)
 	return (neg == 0 ? n : -n);
 }
 
-double		ft_atoid(char *str)
+double			ft_atoid(char *str)
 {
 	double	result;
 	int		i;
