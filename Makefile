@@ -42,24 +42,31 @@ GCC		= gcc
 
 NAME	= libft.a
 
+FT_PRINTF = ft_printf/ft_printf.a
+
 FLAGS	= -Wextra -Werror -Wall
 
 RM		= rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rc $(NAME) $(OBJS)
+$(NAME): $(FT_PRINTF) $(OBJS)
+	cp $(FT_PRINTF) $(NAME)
+	ar r $(NAME) $(OBJS)
 	ranlib $(NAME)
 
 $(OBJS):
 	$(GCC) $(FLAGS) -c -I./ $(SRCS)
 
+$(FT_PRINTF):
+	make -C ./ft_printf/
+
 clean:
 	$(RM) $(OBJS)
+	make clean -C ./ft_printf/
 
 fclean: clean
-	$(RM) $(NAME)
+	$(RM) $(NAME) $(FT_PRINTF)
 
 re: fclean all
 
