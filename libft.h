@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/09/05 14:22:26 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/09/08 14:37:18 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,15 @@
 # define LIBFT_H
 
 # include <string.h>
+
+# ifndef RETURN_STAT
+#  define RETURN_STAT
+
+#  define _FAULT_		0x00
+#  define _ERROR_		0x00
+#  define _SUCCESS_		0x01
+
+# endif
 
 typedef enum		e_bool
 {
