@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/09/08 14:58:15 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/09/08 15:03:39 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <string.h>
-# include "ft_printf/includes/ft_printf.h"
 
 # ifndef RETURN_STAT
 #  define RETURN_STAT
@@ -146,6 +145,8 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 /*
 ** private functions
 */
+
+int					ft_printf(const char *format, ...);
 
 int					ft_putwchar(int c);
 int					ft_putwstr(int *str);
