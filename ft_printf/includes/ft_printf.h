@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/10 14:03:30 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/09/08 14:47:19 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/09/08 14:59:51 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,14 @@
 # include <unistd.h>
 # include "../../libft.h"
 
-# define _FAULT_			0x00
-# define _ERROR_			0x00
-# define _SUCCESS_			0x01
+# ifndef RETURN_STAT
+#  define RETYRN_STA
+
+#  define _FAULT_			0x00
+#  define _ERROR_			0x00
+#  define _SUCCESS_			0x01
+
+# endif
 
 # define NO_CASE			0x00
 # define LO_CASE			0x00

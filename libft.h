@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/09/08 14:37:18 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/09/08 14:58:15 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <string.h>
+# include "ft_printf/includes/ft_printf.h"
 
 # ifndef RETURN_STAT
 #  define RETURN_STAT
