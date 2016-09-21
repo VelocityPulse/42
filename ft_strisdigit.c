@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/16 16:16:37 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/06/19 14:53:18 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/09/21 11:56:00 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ int		ft_strisdigit(char *str)
 
 	i = -1;
 	end = 0;
-	while (str[i] == ' ')
-		i++;
+	while (str[++i] == ' ')
+		;
 	if (str[i] == '-' || str[i] == '+')
 		i++;
 	while (str[i])
 	{
-		if ((str[i] >= 48 || str[i] <= 57) && end == 0)
+		if ((str[i] >= 48 && str[i] <= 57) && end == 0)
 			i++;
 		else if (str[i] == ' ')
 			end = 1;
