@@ -63,7 +63,7 @@ $(FT_PRINTF):
 
 clean:
 	$(RM) $(OBJS)
-	make clean -C ./ft_printf/
+	make fclean -C ./ft_printf/
 
 fclean: clean
 	$(RM) $(NAME) $(FT_PRINTF)
