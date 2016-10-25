@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 13:47:45 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/10/25 15:40:46 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/10/25 15:49:58 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static t_lstline	*ft_new_lstline(char *line)
 	return (list);
 }
 
-void		ft_print_lstline(t_lstline *list)
+void				ft_print_lstline(t_lstline *list)
 {
 	while (list)
 	{
