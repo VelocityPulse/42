@@ -6,26 +6,11 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 13:47:45 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/10/25 15:49:58 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/10/29 14:31:51 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-void				ft_lstline_del(t_lstline **begin)
-{
-	t_lstline	*list;
-
-	list = *begin;
-	while (list)
-	{
-		*begin = list->next;
-		ft_memdel((void **)&list->line);
-		ft_memdel((void **)&list);
-		list = *begin;
-	}
-	*begin = NULL;
-}
 
 static t_lstline	*ft_new_lstline(char *line)
 {
@@ -59,4 +44,40 @@ void				ft_add_lstline(t_lstline **begin, char *line)
 			list = list->next;
 		list->next = ft_new_lstline(line);
 	}
+}
+
+void				ft_lstline_del(t_lstline **begin)
+{
+	t_lstline	*list;
+
+	list = *begin;
+	while (list)
+	{
+		*begin = list->next;
+		ft_memdel((void **)&list->line);
+		ft_memdel((void **)&list);
+		list = *begin;
+	}
+	*begin = NULL;
+}
+
+void				ft_supp_lstline(t_lstline **begin)
+{
+	t_lstline	*list;
+	t_lstline	*temp;
+
+	if (*begin == NULL)
+		return ;
+	list = *begin;
+	if (list->next == NULL)
+	{
+		ft_lstline_del(begin);
+		return ;
+	}
+	while (list->next)
+	{
+		temp = list;
+		list = list->next;
+	}
+	ft_lstline_del(&temp->next);
 }
