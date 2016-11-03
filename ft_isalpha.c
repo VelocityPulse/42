@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 21:46:47 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/06/24 11:27:51 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/11/03 11:04:47 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int		ft_isalpha(int c)
 {
 	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	return (0);
+		return (_SUCCESS_);
+	return (_ERROR_);
 }

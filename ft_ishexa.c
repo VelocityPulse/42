@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/24 11:23:54 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/06/24 11:27:20 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/11/03 11:06:22 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int		ft_ishexa(int c)
 {
 	if (((c >= 'A' && c <= 'F') || (c >= 'a' && c <= 'f')) || ft_isdigit(c))
-		return (1);
-	return (0);
+		return (_SUCCESS_);
+	return (_ERROR_);
 }

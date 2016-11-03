@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 23:23:55 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/11/25 00:12:40 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/11/03 11:05:35 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,6 @@
 int		ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+		return (_SUCCESS_);
+	return (_ERROR_);
 }
