@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/10/29 14:23:33 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/11/25 13:19:07 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -182,6 +182,9 @@ int					ft_strisdigit(char *str);
 int					ft_strisdouble(char *str);
 void				ft_upperstr(char *str);
 void				ft_lowerstr(char *str);
+
+int					ft_strrcmp(char *s1, char *s2);
+int					ft_strrncmp(char *s1, char *s2, int n);
 
 void				ft_swap(int *a, int *b);
 int					ft_memlen(void **tab);
