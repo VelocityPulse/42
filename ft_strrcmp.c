@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/25 13:11:20 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/11/25 13:32:18 by cchameyr         ###   ########.fr       */
+/*   Updated: 2016/11/29 13:29:12 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ int		ft_strrcmp(char *s1, char *s2)
 {
 	int			i1;
 	int			i2;
-
 
 	i1 = ft_strlen(s1);
 	i2 = ft_strlen(s2);
