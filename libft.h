@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/11/29 13:27:56 by cchameyr         ###   ########.fr       */
+/*   Updated: 2018/04/05 14:16:26 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@
 #  define _SUCCESS_		0x01
 
 # endif
+
+# define _FUNC_ _FUNCTION_
 
 typedef enum		e_bool
 {
