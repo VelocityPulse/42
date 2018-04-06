@@ -6,7 +6,7 @@
 /*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2018/04/05 14:19:07 by cchameyr         ###   ########.fr       */
+/*   Updated: 2018/04/06 17:23:49 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -189,6 +189,7 @@ int					ft_strrncmp(char *s1, char *s2, int n);
 void				ft_swap(int *a, int *b);
 unsigned short		ft_bswap16(unsigned short value);
 unsigned int		ft_bswap32(unsigned int value);
+unsigned long int	ft_bswap64(unsigned long int value);
 
 int					ft_memlen(void **tab);
 void				ft_memdel2(void ***ap);
