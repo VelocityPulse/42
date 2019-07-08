@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/07/08 16:47:16 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/07/08 17:08:10 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,12 @@ typedef struct		s_list
 	size_t			content_size;
 	struct s_list	*next;
 }					t_list;
+
+typedef struct		s_bin
+{
+	void			*data;
+	int				size;
+}					t_bin;
 
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
@@ -195,7 +201,7 @@ int					ft_memlen(void **tab);
 void				ft_memdel2(void ***ap);
 
 int					*ft_intdup(const int *i1, int len);
-void				*ft_read_file(char *path);
+t_bin				*ft_read_file(char *path);
 
 
 t_pt				ft_make_pt(int x, int y);
