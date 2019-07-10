@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstline.c                                       :+:      :+:    :+:   */
+/*   ft_lststr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 13:47:45 by cchameyr          #+#    #+#             */
-/*   Updated: 2016/10/29 14:31:51 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/07/10 14:46:30 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_lstline	*ft_new_lstline(char *line)
+static t_lststr	*ft_new_lstline(char *line)
 {
-	t_lstline	*list;
+	t_lststr	*list;
 
-	list = (t_lstline *)ft_memalloc(sizeof(t_lstline));
+	list = (t_lststr *)ft_memalloc(sizeof(t_lststr));
 	list->next = NULL;
 	list->line = line;
 	return (list);
 }
 
-void				ft_print_lstline(t_lstline *list)
+void				ft_print_lststr(t_lststr *list)
 {
 	while (list)
 	{
@@ -31,9 +31,9 @@ void				ft_print_lstline(t_lstline *list)
 	}
 }
 
-void				ft_add_lstline(t_lstline **begin, char *line)
+void				ft_add_lstline(t_lststr **begin, char *line)
 {
-	t_lstline	*list;
+	t_lststr	*list;
 
 	if (*begin == NULL)
 		*begin = ft_new_lstline(line);
@@ -46,9 +46,9 @@ void				ft_add_lstline(t_lstline **begin, char *line)
 	}
 }
 
-void				ft_lstline_del(t_lstline **begin)
+void				ft_lststr_del(t_lststr **begin)
 {
-	t_lstline	*list;
+	t_lststr	*list;
 
 	list = *begin;
 	while (list)
@@ -61,17 +61,17 @@ void				ft_lstline_del(t_lstline **begin)
 	*begin = NULL;
 }
 
-void				ft_supp_lstline(t_lstline **begin)
+void				ft_supp_lstline(t_lststr **begin)
 {
-	t_lstline	*list;
-	t_lstline	*temp;
+	t_lststr	*list;
+	t_lststr	*temp;
 
 	if (*begin == NULL)
 		return ;
 	list = *begin;
 	if (list->next == NULL)
 	{
-		ft_lstline_del(begin);
+		ft_lststr_del(begin);
 		return ;
 	}
 	while (list->next)
@@ -79,5 +79,5 @@ void				ft_supp_lstline(t_lstline **begin)
 		temp = list;
 		list = list->next;
 	}
-	ft_lstline_del(&temp->next);
+	ft_lststr_del(&temp->next);
 }

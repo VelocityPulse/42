@@ -10,7 +10,7 @@ ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c ft_tolower.c ft_toupper.c \
 ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstiter.c ft_lstmap.c ft_lstadd.c \
 ft_swap.c ft_memlen.c ft_pt_alloc.c ft_make_pt.c ft_make_pt3d.c ft_add_pt.c \
 ft_add_pt3d.c ft_make_pt3df.c ft_add_pt3df.c ft_pt3d_alloc.c ft_make_ptll.c \
-ft_add_ptll.c ft_make_ptd.c ft_add_ptd.c ft_lstline.c ft_make_ptd3d.c \
+ft_add_ptll.c ft_make_ptd.c ft_add_ptd.c ft_lststr.c ft_make_ptd3d.c \
 ft_add_ptd3d.c ft_power.c ft_strisdigit.c ft_memdel2.c ft_strisdouble.c \
 ft_abs.c ft_atoi_base.c ft_ishexa.c ft_strishexa.c ft_putnstr.c ft_nblen.c \
 ft_nblen_l.c ft_itoa_base.c ft_putnbr_l.c ft_itoa_base_l.c ft_binlen.c \
@@ -31,7 +31,7 @@ ft_strsplit.o ft_strstr.o ft_strsub.o ft_strtrim.o ft_tolower.o ft_toupper.o \
 ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstiter.o ft_lstmap.o ft_lstadd.o \
 ft_swap.o ft_memlen.o ft_pt_alloc.o ft_make_pt.o ft_make_pt3d.o ft_add_pt.o \
 ft_add_pt3d.o ft_make_pt3df.o ft_add_pt3df.o ft_pt3d_alloc.o ft_make_ptll.o \
-ft_add_ptll.o ft_make_ptd.o ft_add_ptd.o ft_lstline.o ft_make_ptd3d.o \
+ft_add_ptll.o ft_make_ptd.o ft_add_ptd.o ft_lststr.o ft_make_ptd3d.o \
 ft_add_ptd3d.o ft_power.o ft_strisdigit.o ft_memdel2.o ft_strisdouble.o \
 ft_abs.o ft_atoi_base.o ft_ishexa.o ft_strishexa.o ft_putnstr.o ft_nblen.o \
 ft_nblen_l.o ft_itoa_base.o ft_putnbr_l.o ft_itoa_base_l.o ft_binlen.o \

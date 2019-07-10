@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/07/08 17:08:10 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/07/10 14:44:22 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@
 #  define _SUCCESS_		0x01
 
 # endif
+
+# define _CMP_EQUAL_	0x00
 
 typedef enum		e_bool
 {
@@ -69,11 +71,11 @@ typedef struct		s_pt3df
 	float			z;
 }					t_pt3df;
 
-typedef struct		s_lstline
+typedef struct		s_lststr
 {
-	struct s_lstline	*next;
 	char				*line;
-}					t_lstline;
+	struct s_lststr	*next;
+}					t_lststr;
 
 typedef struct		s_list
 {
@@ -223,9 +225,9 @@ t_pt				**ft_free_pt(t_pt **tab_pts, int size);
 t_pt3d				**ft_pt3d_alloc(t_pt size);
 t_pt3d				**ft_free_pt3d(t_pt3d **tab_pts, int size);
 
-void				ft_lstline_del(t_lstline **begin);
-void				ft_add_lstline(t_lstline **begin, char *line);
-void				ft_supp_lstline(t_lstline **begin);
-void				ft_print_lstline(t_lstline *list);
+void				ft_lstline_del(t_lststr **begin);
+void				ft_add_lstline(t_lststr **begin, char *line);
+void				ft_supp_lstline(t_lststr **begin);
+void				ft_print_lstline(t_lststr *list);
 
 #endif
