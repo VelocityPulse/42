@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/07/10 14:44:22 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/07/10 14:51:50 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ typedef struct		s_pt3df
 
 typedef struct		s_lststr
 {
-	char				*line;
+	char			*str;
 	struct s_lststr	*next;
 }					t_lststr;
 
@@ -205,7 +205,6 @@ void				ft_memdel2(void ***ap);
 int					*ft_intdup(const int *i1, int len);
 t_bin				*ft_read_file(char *path);
 
-
 t_pt				ft_make_pt(int x, int y);
 t_ptd				ft_make_ptd(double x, double y);
 t_ptd3d				ft_make_ptd3d(double x, double y, double z);
@@ -225,9 +224,9 @@ t_pt				**ft_free_pt(t_pt **tab_pts, int size);
 t_pt3d				**ft_pt3d_alloc(t_pt size);
 t_pt3d				**ft_free_pt3d(t_pt3d **tab_pts, int size);
 
-void				ft_lstline_del(t_lststr **begin);
-void				ft_add_lstline(t_lststr **begin, char *line);
-void				ft_supp_lstline(t_lststr **begin);
-void				ft_print_lstline(t_lststr *list);
+void				ft_lststr_del(t_lststr **begin);
+void				ft_add_lststr(t_lststr **begin, char *line);
+void				ft_supp_lststr(t_lststr **begin);
+void				ft_print_lststr(t_lststr *list);
 
 #endif

@@ -6,19 +6,19 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 13:47:45 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/07/10 14:46:30 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/07/10 14:51:53 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_lststr	*ft_new_lstline(char *line)
+static t_lststr	*ft_new_lststr(char *str)
 {
 	t_lststr	*list;
 
 	list = (t_lststr *)ft_memalloc(sizeof(t_lststr));
 	list->next = NULL;
-	list->line = line;
+	list->str = str;
 	return (list);
 }
 
@@ -26,23 +26,23 @@ void				ft_print_lststr(t_lststr *list)
 {
 	while (list)
 	{
-		ft_printf("%s\n", list->line);
+		ft_printf("%s\n", list->str);
 		list = list->next;
 	}
 }
 
-void				ft_add_lstline(t_lststr **begin, char *line)
+void				ft_add_lststr(t_lststr **begin, char *str)
 {
 	t_lststr	*list;
 
 	if (*begin == NULL)
-		*begin = ft_new_lstline(line);
+		*begin = ft_new_lststr(str);
 	else
 	{
 		list = *begin;
 		while (list->next)
 			list = list->next;
-		list->next = ft_new_lstline(line);
+		list->next = ft_new_lststr(str);
 	}
 }
 
@@ -54,14 +54,14 @@ void				ft_lststr_del(t_lststr **begin)
 	while (list)
 	{
 		*begin = list->next;
-		ft_memdel((void **)&list->line);
+		ft_memdel((void **)&list->str);
 		ft_memdel((void **)&list);
 		list = *begin;
 	}
 	*begin = NULL;
 }
 
-void				ft_supp_lstline(t_lststr **begin)
+void				ft_supp_lststr(t_lststr **begin)
 {
 	t_lststr	*list;
 	t_lststr	*temp;
