@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cchameyr <cchameyr@students.42.fr>         +#+  +:+       +#+        */
+/*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 16:16:27 by cchameyr          #+#    #+#             */
-/*   Updated: 2015/12/01 12:54:42 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/07/10 21:13:33 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ t_list		*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		if (!(list->content = malloc(sizeof(content))))
-			return (NULL);
-		list->content = ft_memmove(list->content, content, content_size);
+		list->content = (void *)content;
 		list->content_size = content_size;
 		list->next = NULL;
 	}
