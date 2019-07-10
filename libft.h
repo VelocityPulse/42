@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/07/10 14:51:50 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/07/10 16:44:29 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <string.h>
+
+# define GNL_BUFF_SIZE 1
 
 # ifndef RETURN_STAT
 #  define RETURN_STAT
@@ -70,6 +72,13 @@ typedef struct		s_pt3df
 	float			y;
 	float			z;
 }					t_pt3df;
+
+typedef struct		s_gnl
+{
+	char			*buff;
+	char			*temp;
+	int				ret;
+}					t_gnl;
 
 typedef struct		s_lststr
 {
@@ -156,6 +165,8 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 int					ft_printf(const char *format, ...);
 
+int					get_next_line(const int fd, char **line);
+
 int					ft_putwchar(int c);
 int					ft_putwstr(int *str);
 int					ft_putnwchar(int c, int len);
@@ -228,5 +239,6 @@ void				ft_lststr_del(t_lststr **begin);
 void				ft_add_lststr(t_lststr **begin, char *line);
 void				ft_supp_lststr(t_lststr **begin);
 void				ft_print_lststr(t_lststr *list);
+char				*ft_merge_lststr(t_lststr *list);
 
 #endif
