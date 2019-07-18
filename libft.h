@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/07/10 20:39:30 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/07/18 19:10:08 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -214,7 +214,7 @@ int					ft_memlen(void **tab);
 void				ft_memdel2(void ***ap);
 
 int					*ft_intdup(const int *i1, int len);
-t_bin				*ft_read_file(char *path);
+t_bin				*ft_readonly_file(char *path);
 
 t_pt				ft_make_pt(int x, int y);
 t_ptd				ft_make_ptd(double x, double y);

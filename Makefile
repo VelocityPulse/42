@@ -17,7 +17,7 @@ ft_nblen_l.c ft_itoa_base.c ft_putnbr_l.c ft_itoa_base_l.c ft_binlen.c \
 ft_upperstr.c ft_putnbr_ll.c ft_nblen_ll.c ft_itoa_base_ll.c ft_lowerstr.c \
 ft_putwchar.c ft_atoi_nbase.c ft_putwstr.c ft_putnwstr.c ft_putnwchar.c \
 ft_strwlen.c ft_charwlen.c ft_strnwlen.c ft_intdup.c ft_strrcmp.c \
-ft_strrncmp.c ft_bswap.c ft_read_file.c get_next_line.c
+ft_strrncmp.c ft_bswap.c ft_readonly_file.c get_next_line.c
 
 OBJS		= ft_atoi.o ft_bzero.o ft_isalnum.o ft_isalpha.o ft_isascii.o \
 ft_isdigit.o ft_isprint.o ft_itoa.o ft_memalloc.o ft_memccpy.o ft_memchr.o \
@@ -38,7 +38,7 @@ ft_nblen_l.o ft_itoa_base.o ft_putnbr_l.o ft_itoa_base_l.o ft_binlen.o \
 ft_upperstr.o ft_putnbr_ll.o ft_nblen_ll.o ft_itoa_base_ll.o ft_lowerstr.o \
 ft_putwchar.o ft_atoi_nbase.o ft_putwstr.o ft_putnwstr.o ft_putnwchar.o \
 ft_strwlen.o ft_charwlen.o ft_strnwlen.o ft_intdup.o ft_strrcmp.o \
-ft_strrncmp.o ft_bswap.o ft_read_file.o get_next_line.o
+ft_strrncmp.o ft_bswap.o ft_readonly_file.o get_next_line.o
 
 GCC		= gcc
 
