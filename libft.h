@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/07/10 20:39:30 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/07/19 17:10:48 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -209,6 +209,16 @@ void				ft_swap(int *a, int *b);
 unsigned short		ft_bswap16(unsigned short value);
 unsigned int		ft_bswap32(unsigned int value);
 unsigned long int	ft_bswap64(unsigned long int value);
+
+unsigned char		ft_b8rotate_left(unsigned char value, int offset);
+unsigned char		ft_b8rotate_right(unsigned char value, int offset);
+unsigned short		ft_b16rotate_left(unsigned short value, int offset);
+unsigned short		ft_b16rotate_right(unsigned short value, int offset);
+unsigned int		ft_b32rotate_left(unsigned int value, int offset);
+unsigned int		ft_b32rotate_right(unsigned int value, int offset);
+unsigned long int	ft_b64rotate_left(unsigned long int value, int offset);
+unsigned long int	ft_b64rotate_right(unsigned long int value, int offset);
+
 
 int					ft_memlen(void **tab);
 void				ft_memdel2(void ***ap);
