@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/07/19 17:10:48 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/07/22 12:22:55 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -206,6 +206,7 @@ int					ft_strrcmp(char *s1, char *s2);
 int					ft_strrncmp(char *s1, char *s2, int n);
 
 void				ft_swap(int *a, int *b);
+unsigned char		ft_bswap8(unsigned char value);
 unsigned short		ft_bswap16(unsigned short value);
 unsigned int		ft_bswap32(unsigned int value);
 unsigned long int	ft_bswap64(unsigned long int value);

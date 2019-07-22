@@ -3,14 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bswap.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cchameyr <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/29 13:22:31 by cchameyr          #+#    #+#             */
-/*   Updated: 2018/04/06 17:21:14 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/07/22 12:22:02 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+unsigned char		ft_bswap8(unsigned char value)
+{
+	return ((value >> 4) | (value << 4));
+}
 
 unsigned short		ft_bswap16(unsigned short value)
 {
