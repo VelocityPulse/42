@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/05 14:22:25 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/07/22 12:22:55 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/07/31 14:32:02 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -155,7 +155,7 @@ char				**ft_strsplit(char const *s, char c);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (del)(void *, size_t));
-void				ft_lstadd(t_list **alst, t_list *new);
+t_list				*ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
@@ -219,7 +219,6 @@ unsigned int		ft_b32rotate_left(unsigned int value, int offset);
 unsigned int		ft_b32rotate_right(unsigned int value, int offset);
 unsigned long int	ft_b64rotate_left(unsigned long int value, int offset);
 unsigned long int	ft_b64rotate_right(unsigned long int value, int offset);
-
 
 int					ft_memlen(void **tab);
 void				ft_memdel2(void ***ap);
