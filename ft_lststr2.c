@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 13:47:45 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/07/10 16:30:10 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/08/01 13:02:21 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ char	*ft_merge_lststr(t_lststr *list)
 		ft_strcat(ret, item->str);
 		item = item->next;
 	}
-	return ret;
+	return (ret);
 }

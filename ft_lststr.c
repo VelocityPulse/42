@@ -6,13 +6,13 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 13:47:45 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/07/31 15:27:54 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/08/01 13:01:51 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static t_lststr	*ft_new_lststr(char *str)
+static t_lststr		*ft_new_lststr(char *str)
 {
 	t_lststr	*list;
 

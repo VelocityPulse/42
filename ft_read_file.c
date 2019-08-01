@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 14:50:14 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/07/10 21:31:26 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/08/01 13:01:24 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,14 +23,14 @@ t_bin		*ft_read_file(char *path)
 	t_bin		*data;
 
 	if ((fd = open(path, O_RDONLY)) < 0)
-		return NULL;
+		return (NULL);
 	if (fstat(fd, &buff) < 0)
-		return NULL;
+		return (NULL);
 	if ((ptr = mmap(0, buff.st_size, PROT_READ, MAP_PRIVATE, fd, 0)) ==
 				MAP_FAILED)
-		return NULL;
+		return (NULL);
 	data = (t_bin *)ft_memalloc(sizeof(t_bin));
 	data->data = ptr;
 	data->size = buff.st_size;
-	return data;
+	return (data);
 }
