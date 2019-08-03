@@ -6,7 +6,7 @@
 /*   By: cchameyr <cchameyr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/02/15 13:47:45 by cchameyr          #+#    #+#             */
-/*   Updated: 2019/08/01 13:01:51 by cchameyr         ###   ########.fr       */
+/*   Updated: 2019/08/03 21:16:29 by cchameyr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,25 +59,4 @@ void				ft_lststr_del(t_lststr **begin)
 		list = *begin;
 	}
 	*begin = NULL;
-}
-
-void				ft_supp_lststr(t_lststr **begin)
-{
-	t_lststr	*list;
-	t_lststr	*temp;
-
-	if (*begin == NULL)
-		return ;
-	list = *begin;
-	if (list->next == NULL)
-	{
-		ft_lststr_del(begin);
-		return ;
-	}
-	while (list->next)
-	{
-		temp = list;
-		list = list->next;
-	}
-	ft_lststr_del(&temp->next);
 }
